@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="-mt-16 flex h-screen flex-col items-center justify-center">
+<img class="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
+<h1 class="my-4 text-4xl">Will you be my GF?</h1>
+<div class="flex items-center">
+<button id="yes-button" class="mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700" style="font-size: 16px;">Yes</button>
+<button id="no-button" class=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700">No</button>
+</div>
+</div>
+<script>
+  const noButton = document.getElementById('no-button');
+  const yesButton = document.getElementById('yes-button');
+  let clickCount = 0;
+
+  noButton.addEventListener('click', function() {
+    clickCount++;
+    switch (clickCount) {
+      case 1:
+        noButton.innerText = 'Are you sure?';
+        yesButton.style.transform = 'scale(1.2)';
+        break;
+      case 2:
+        noButton.innerText = 'Sure?';
+		yesButton.style.transform = 'scale(1.4)';
+        break;
+      case 3:
+        noButton.innerText = 'What if I asked really nicely?';
+		yesButton.style.transform = 'scale(1.6)';
+        break;
+	  case 4:
+        noButton.innerText = 'Pretty please';
+		yesButton.style.transform = 'scale(1.8)';
+        break;
+	  case 5:
+        noButton.innerText = 'PLEASE POOKIE';
+		yesButton.style.transform = 'scale(2.0)';
+        break;
+	  case 6:
+        noButton.innerText = 'But :*(';
+		yesButton.style.transform = 'scale(2.2)';
+        break;
+	  case 7:
+        noButton.innerText = 'I am going to die';
+		yesButton.style.transform = 'scale(2.4)';
+        break;
+	  case 8:
+        noButton.innerText = 'Yep im dead';
+		yesButton.style.transform = 'scale(2.6)';
+        break;
+	  case 9:
+        noButton.innerText = "ok ur talking to giorgi's ghost";
+		yesButton.style.transform = 'scale(2.9)';
+        break;
+      default:
+        noButton.innerText = 'No';
+        clickCount = 0;
+        yesButton.style.transform = 'scale(1)';
+    }
+  });
+  yesButton.addEventListener('click', function() {
+  // Redirect to the other HTML page
+  window.location.href = 'wooo.html';
+});
+</script>
+</body>
+</html>
